@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emil | Digital Business Card</title>
+    <meta
+      name="description"
+      content="Digital business card for Emil with contact links for phone, WhatsApp, Instagram, TikTok, Facebook and Google Maps."
+    />
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --card: #ffffff;
+        --primary: #111827;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --line: #e5e7eb;
+        --button-shadow: rgba(17, 24, 39, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--text);
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 16px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 430px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        box-shadow: 0 14px 30px var(--button-shadow);
+        padding: 28px 22px 20px;
+      }
+
+      .profile {
+        text-align: center;
+        margin-bottom: 22px;
+      }
+
+      .avatar {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        margin: 0 auto 16px;
+        background: linear-gradient(135deg, #111827 0%, #374151 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 3vw, 2.2rem);
+        color: var(--primary);
+        line-height: 1.2;
+      }
+
+      .description {
+        margin: 10px 0 0;
+        font-size: 1rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .button-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        min-height: 54px;
+        border-radius: 16px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.98rem;
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+        box-shadow: 0 8px 18px rgba(17, 24, 39, 0.08);
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button:active {
+        transform: translateY(0);
+      }
+
+      .phone {
+        background: linear-gradient(135deg, #111827 0%, #374151 100%);
+      }
+
+      .whatsapp {
+        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      }
+
+      .instagram {
+        background: linear-gradient(135deg, #f58529 0%, #dd2a7b 35%, #8134af 70%, #515bd4 100%);
+      }
+
+      .tiktok {
+        background: linear-gradient(135deg, #010101 0%, #333333 100%);
+      }
+
+      .facebook {
+        background: linear-gradient(135deg, #1877f2 0%, #0d5bd7 100%);
+      }
+
+      .maps {
+        background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+      }
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        line-height: 1;
+      }
+
+      @media (max-width: 480px) {
+        .card {
+          border-radius: 22px;
+          padding: 24px 18px 18px;
+        }
+
+        .button {
+          min-height: 52px;
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card" aria-label="Digital business card">
+      <!--
+        EDIT THESE VALUES:
+        1) Replace "Emil" with your name or business name.
+        2) Replace "Rəqəmsal Vizit Kart" with your short description.
+        3) Replace "+994XXXXXXXXX" with your phone number.
+        4) Replace "+994XXXXXXXXX" with your WhatsApp number.
+        5) Replace "test" with your Instagram username.
+        6) Replace "test" with your TikTok username.
+        7) Replace "https://facebook.com" with your Facebook profile/page URL.
+        8) Replace "https://maps.google.com" with your Google Maps link.
+      -->
+
+      <section class="profile">
+        <div class="avatar" aria-label="Profile initial">E</div>
+        <h1>Emil</h1>
+        <p class="description">Rəqəmsal Vizit Kart</p>
+      </section>
+
+      <nav class="button-list" aria-label="Contact links">
+        <a class="button phone" href="tel:+994XXXXXXXXX" aria-label="Call Emil">
+          <span class="icon">📞</span>
+          <span>Phone call</span>
+        </a>
+
+        <a
+          class="button whatsapp"
+          href="https://wa.me/+994XXXXXXXXX"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp Emil"
+        >
+          <span class="icon">💬</span>
+          <span>WhatsApp</span>
+        </a>
+
+        <a
+          class="button instagram"
+          href="https://www.instagram.com/test/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram Emil"
+        >
+          <span class="icon">📷</span>
+          <span>Instagram</span>
+        </a>
+
+        <a
+          class="button tiktok"
+          href="https://www.tiktok.com/@test"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok Emil"
+        >
+          <span class="icon">🎵</span>
+          <span>TikTok</span>
+        </a>
+
+        <a
+          class="button facebook"
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook Emil"
+        >
+          <span class="icon">f</span>
+          <span>Facebook</span>
+        </a>
+
+        <a
+          class="button maps"
+          href="https://maps.google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Google Maps location"
+        >
+          <span class="icon">📍</span>
+          <span>Google Maps</span>
+        </a>
+      </nav>
+    </main>
+  </body>
+</html>
